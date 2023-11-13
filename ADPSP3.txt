@@ -1,0 +1,42 @@
+SPRING BOOT NOTES
+*****************
+
+Shows all info about errors 
+
+server.error.include-binding-errors=always
+server.error.include-exception=true
+server.error.include-message=always
+server.error.include-stacktrace=always
+
+
+
+In runtimeexception is dosen´t necesessary to take a try and catch, but in exception it`s necessary to take it.
+
+
+Another mechanisim @ExecpetionHandler 
+
+
+Spring 5 -> ResponseEstatusException takes the exception and trows a response, two exception can trows the same response
+because the response has his own responsability.
+
+
+We will use -> @(Rest)ControllerAdvice
+
+If the service trows an error it throws a personal exception to a class who are a group of common modals of erros and it 
+will return the response to the client.
+
+We will use an interface with abstracts methot and another class will implement it and then the class will take 
+body of the interface
+
+Change spring boot 2-3
+imports*
+javaX -> jakarta
+
+
+
+Pring 6 -> class Problem Detail adds all personal properties we want
+ 
+
+
+
+
