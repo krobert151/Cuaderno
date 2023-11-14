@@ -10,23 +10,27 @@ server.error.include-stacktrace=always
 
 
 
-In runtimeexception is dosen´t necesessary to take a try and catch, but in exception it`s necessary to take it.
+In runtimeexception is dosen´t necesessary to take a try and 
+catch, but in exception it`s necessary to take it.
 
 
 Another mechanisim @ExecpetionHandler 
 
 
-Spring 5 -> ResponseEstatusException takes the exception and trows a response, two exception can trows the same response
+Spring 5 -> ResponseEstatusException takes the exception and 
+trows a response, two exception can trows the same response
 because the response has his own responsability.
 
 
 We will use -> @(Rest)ControllerAdvice
 
-If the service trows an error it throws a personal exception to a class who are a group of common modals of erros and it 
+If the service trows an error it throws a personal exception 
+to a class who are a group of common modals of erros and it 
 will return the response to the client.
 
-We will use an interface with abstracts methot and another class will implement it and then the class will take 
-body of the interface
+We will use an interface with abstracts methot and another 
+class will implement it and then the class will take body 
+of the interface
 
 Change spring boot 2-3
 imports*
@@ -34,8 +38,44 @@ javaX -> jakarta
 
 
 
-Pring 6 -> class Problem Detail adds all personal properties we want
+Pring 6 -> class Problem Detail adds all personal properties 
+we want
  
+VALIDACION
+
+If a proyect needs a validation it will needs the spring´s 
+dependency
+
+some validation annotations
+
+@NotNull - the attribute cant be null
+@NotEmpty - the attribute cant be empty and null
+@NotBlank - tha string cant be void
+
+@Min @Max comprobe the numerics valors
+
+@Pattern - our pattern format
+
+@Email - emmail format
+
+@Past @Future - time
+
+@URL - the string must be an url
+@ISBN 
+...
+
+All of this must be aplies on DTOs and in the service the DTO must be have a @Value 
+example public ?<?> manolo (@Valid @RequestBody DTOExample dtoExample){}
+
+
+message of the error must be in propertie
+
+userDTO.password.notEmpty=Ta vacio
+
+@NotEmpty(message ="{userDTO.password.notEmpty}")
+
+
+
 
 
 
