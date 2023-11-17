@@ -1,0 +1,9 @@
+NOTAS DEL CLIENTE
+******************
+
+Dos perifles de la api
+
+El de desarrollo debe cargar bastantes datos de ejemplos, para por emplo la paginacion.
+
+El de producción no, teoricamente debe tener lo estrictamente necesario.
+
